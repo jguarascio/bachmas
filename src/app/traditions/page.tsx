@@ -15,12 +15,6 @@ export default function Traditions() {
               <h2 className="text-2xl font-display text-bach-brown mb-4">
                 Celebration of Bach&apos;s Music
               </h2>
-              <p className="text-lg text-bach-brown">
-                Bach&apos;s music is central to the celebration. Listen to his masterpieces, from the Brandenburg Concertos to the Goldberg Variations.
-              </p>
-              <p className="text-lg text-bach-brown">
-                Share Bach&apos;s music with others, whether through performance or listening together.
-              </p>
               <p className="text-bach-brown leading-relaxed">
                 On this joyous day, Bachmas, we celebrate the birth of our savior of music, Johann Sebastian Bach. 
                 The day begins with the sound of Bach&apos;s music filling the air, as families gather to perform his 
