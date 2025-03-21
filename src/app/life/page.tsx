@@ -1,4 +1,5 @@
 import Navigation from '@/components/Navigation';
+import Image from 'next/image';
 
 const timeline = [
   {
@@ -77,7 +78,15 @@ export default function Life() {
           <h1 className="text-4xl font-display text-bach-brown mb-8 text-center">
             Life of Johann Sebastian Bach
           </h1>
-
+          <div className="relative w-64 h-64 mx-auto mb-12">
+            <Image
+              src="/bach-portrait.jpg"
+              alt="Portrait of Johann Sebastian Bach"
+              fill
+              className="rounded-full object-cover shadow-lg"
+              priority
+            />
+          </div>
           <div className="space-y-8">
             {timeline.map((item, index) => (
               <div
