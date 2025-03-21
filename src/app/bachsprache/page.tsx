@@ -92,21 +92,6 @@ export default function Bachsprache() {
               emotions and situations through the universal language of Bach&apos;s music.
             </p>
           </div>
-
-          <div className="mt-12 bg-bach-brown/5 p-6 rounded-lg">
-            <h2 className="text-xl font-display text-bach-brown mb-4">
-              Fun Facts about Bach&apos;s Music
-            </h2>
-            <p className="text-lg text-bach-brown">
-              Bach&apos;s music is filled with symbolism and hidden meanings. For example, the number 14 (B+A+C+H = 2+1+3+8 = 14) appears frequently in his works.
-            </p>
-            <p className="text-lg text-bach-brown">
-              The &quot;Great&quot; G minor Fugue (BWV 542) is also known as the &quot;Little&quot; G minor Fugue, despite being one of his most complex works.
-            </p>
-            <p className="text-lg text-bach-brown">
-              The &quot;Little&quot; G minor Fugue (BWV 578) is actually one of his most popular and accessible works, despite its &quot;little&quot; nickname.
-            </p>
-          </div>
         </div>
       </div>
     </main>

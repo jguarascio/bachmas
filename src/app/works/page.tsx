@@ -56,9 +56,9 @@ const bvwCategories = [
     popular: ['BWV 1046-1051 - Brandenburg Concertos', 'BWV 1066-1069 - Orchestral Suites'],
   },
   {
-    range: 'BWV 1041-1071',
-    title: 'Canons and Musical Offering',
-    description: 'Canons and the Musical Offering',
+    range: 'BWV 1041-1080',
+    title: 'Canons, etc.',
+    description: 'Canons, etc.',
     popular: ['BWV 1079 - The Musical Offering', 'BWV 1080 - The Art of Fugue'],
   },
 ];
@@ -83,12 +83,6 @@ export default function Works() {
               The works are organized by genre and instrumentation, with sacred vocal works (cantatas, 
               motets, passions, etc.) appearing first, followed by secular vocal works, organ works, 
               keyboard works, and instrumental works.
-            </p>
-            <p className="text-lg text-bach-brown">
-              Bach&apos;s works are organized by BWV (Bach-Werke-Verzeichnis) numbers, cataloging over 1,000 compositions.
-            </p>
-            <p className="text-lg text-bach-brown">
-              The Well-Tempered Clavier&apos;s 48 preludes and fugues demonstrate Bach&apos;s mastery of counterpoint.
             </p>
           </div>
 
