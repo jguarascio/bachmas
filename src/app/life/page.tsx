@@ -1,5 +1,6 @@
 import Navigation from '@/components/Navigation';
 import Image from 'next/image';
+import YouTube from '@/components/YouTube';
 
 const timeline = [
   {
@@ -71,44 +72,32 @@ const timeline = [
 
 export default function Life() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen bg-bach-parchment">
       <Navigation />
-      <div className="pt-24 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-        <div className="max-w-3xl mx-auto">
-          <h1 className="text-4xl font-display text-bach-brown mb-8 text-center">
-            Life of Johann Sebastian Bach
-          </h1>
-          <div className="relative w-64 h-64 mx-auto mb-12">
-            <Image
-              src="/bach-portrait.jpg"
-              alt="Portrait of Johann Sebastian Bach"
-              fill
-              className="rounded-full object-cover shadow-lg"
-              priority
+      <div className="pt-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <h1 className="text-4xl font-serif text-bach-brown mb-8">Life of Bach</h1>
+          
+          {/* Example YouTube video */}
+          <div className="mb-12">
+            <h2 className="text-2xl font-serif text-bach-brown mb-4">Bach&apos;s Legacy</h2>
+            <YouTube 
+              videoId="Nnuq9PXbywA" 
+              title="Bach's Legacy"
+              className="max-w-3xl mx-auto"
             />
           </div>
-          <div className="space-y-8">
-            {timeline.map((item, index) => (
-              <div
-                key={item.year}
-                className={`relative pl-8 pb-8 ${
-                  index !== timeline.length - 1 ? 'border-l-2 border-bach-brown/20' : ''
-                }`}
-              >
-                <div className="absolute left-0 top-0 w-4 h-4 bg-bach-brown rounded-full -translate-x-[9px]" />
-                <div className="bg-bach-brown/5 p-6 rounded-lg">
-                  <div className="text-xl font-display text-bach-brown mb-2">
-                    {item.year}
-                  </div>
-                  <h2 className="text-lg font-semibold text-bach-brown mb-2">
-                    {item.event}
-                  </h2>
-                  <p className="text-bach-brown leading-relaxed">
-                    {item.description}
-                  </p>
-                </div>
-              </div>
-            ))}
+
+          <div className="prose prose-lg max-w-none">
+            <p>
+              Johann Sebastian Bach was born in Eisenach, Germany, in 1685. His father, Johann Ambrosius Bach, was the director of the town musicians, and all of his uncles were professional musicians. His father taught him to play violin and harpsichord, and his brother, Johann Christoph Bach, taught him the clavichord and exposed him to much contemporary music.
+            </p>
+            <p>
+              Bach&apos;s mother died in 1694, and his father died eight months later. The 10-year-old Bach moved in with his oldest brother, Johann Christoph Bach, the organist at St. Michael&apos;s Church in Ohrdruf, Saxe-Gotha-Altenburg. There he studied, performed, and copied music, including his own brother&apos;s, despite being forbidden to do so because scores were so valuable and private and blank ledger paper of that type was costly.
+            </p>
+            <p>
+              Bach&apos;s musical style arose from his skill in contrapuntal invention and motivic control, his flair for improvisation at the keyboard, his exposure to North and South German, Italian and French music, and his apparent devotion to the Lutheran liturgy. His access to musicians, scores and instruments as a child and a young man and his emerging talent for writing densely woven textures of sacred and instrumental music enabled him to develop an eclectic, energetic musical style in which foreign influences were injected into an intensified version of the pre-existing German musical language.
+            </p>
           </div>
         </div>
       </div>

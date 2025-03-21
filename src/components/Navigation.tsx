@@ -1,85 +1,124 @@
 'use client';
 
-import { useState } from 'react';
 import Link from 'next/link';
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
-
-const navigation = [
-  { name: 'Home', href: '/' },
-  { name: 'Traditions', href: '/traditions' },
-  { name: 'Life of Bach', href: '/life' },
-  { name: 'Works of Bach', href: '/works' },
-  { name: 'Bachsprache', href: '/bachsprache' },
-];
+import { useState, useEffect } from 'react';
 
 export default function Navigation() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+
+  // Close menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      const nav = document.getElementById('nav');
+      if (nav && !nav.contains(event.target as Node)) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
+  // Close menu when clicking a link
+  const handleLinkClick = () => {
+    setIsOpen(false);
+  };
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 bg-bach-parchment/95 backdrop-blur-sm border-b border-bach-brown/20">
-      <nav className="flex items-center justify-between p-6 lg:px-8 max-w-7xl mx-auto" aria-label="Global">
-        <div className="flex lg:flex-1">
-          <Link href="/" className="-m-1.5 p-1.5">
-            <span className="text-2xl font-display text-bach-brown">Bachmas</span>
-          </Link>
-        </div>
-        <div className="flex lg:hidden">
-          <button
-            type="button"
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-bach-brown"
-            onClick={() => setMobileMenuOpen(true)}
-          >
-            <span className="sr-only">Open main menu</span>
-            <Bars3Icon className="h-6 w-6" aria-hidden="true" />
-          </button>
-        </div>
-        <div className="hidden lg:flex lg:gap-x-12">
-          {navigation.map((item) => (
-            <Link
-              key={item.name}
-              href={item.href}
-              className="text-sm font-semibold leading-6 text-bach-brown hover:text-bach-gold transition-colors"
-            >
-              {item.name}
+    <nav id="nav" className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between h-16">
+          <div className="flex items-center">
+            <Link href="/" className="text-2xl font-serif text-gray-900">
+              Bachmas
             </Link>
-          ))}
-        </div>
-      </nav>
-      {/* Mobile menu */}
-      <div className={`lg:hidden ${mobileMenuOpen ? 'fixed inset-0 z-50' : 'hidden'}`}>
-        <div className="fixed inset-0 bg-bach-parchment/95 backdrop-blur-sm" aria-hidden="true" />
-        <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-bach-parchment px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-bach-brown/10">
-          <div className="flex items-center justify-between">
-            <Link href="/" className="-m-1.5 p-1.5">
-              <span className="text-2xl font-display text-bach-brown">Bachmas</span>
+          </div>
+
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center space-x-8">
+            <Link href="/" className="text-gray-700 hover:text-gray-900">
+              Home
             </Link>
+            <Link href="/life" className="text-gray-700 hover:text-gray-900">
+              Life of Bach
+            </Link>
+            <Link href="/works" className="text-gray-700 hover:text-gray-900">
+              Works
+            </Link>
+            <Link href="/traditions" className="text-gray-700 hover:text-gray-900">
+              Traditions
+            </Link>
+            <Link href="/bachsprache" className="text-gray-700 hover:text-gray-900">
+              Bachsprache
+            </Link>
+          </div>
+
+          {/* Mobile menu button */}
+          <div className="md:hidden flex items-center">
             <button
-              type="button"
-              className="-m-2.5 rounded-md p-2.5 text-bach-brown"
-              onClick={() => setMobileMenuOpen(false)}
+              onClick={() => setIsOpen(!isOpen)}
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-gray-900 focus:outline-none"
+              aria-expanded="false"
             >
-              <span className="sr-only">Close menu</span>
-              <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+              <span className="sr-only">Open main menu</span>
+              <div className="w-6 h-6 flex flex-col justify-center items-center">
+                <span className={`block w-6 h-0.5 bg-current transform transition duration-300 ease-in-out ${isOpen ? 'rotate-45 translate-y-2.5' : '-translate-y-1'}`} />
+                <span className={`block w-6 h-0.5 bg-current transition duration-300 ease-in-out ${isOpen ? 'opacity-0' : 'opacity-100'}`} />
+                <span className={`block w-6 h-0.5 bg-current transform transition duration-300 ease-in-out ${isOpen ? '-rotate-45 -translate-y-2.5' : 'translate-y-1'}`} />
+              </div>
             </button>
           </div>
-          <div className="mt-6 flow-root">
-            <div className="-my-6 divide-y divide-bach-brown/10">
-              <div className="space-y-2 py-6">
-                {navigation.map((item) => (
-                  <Link
-                    key={item.name}
-                    href={item.href}
-                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-bach-brown hover:bg-bach-brown/5"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    {item.name}
-                  </Link>
-                ))}
-              </div>
+        </div>
+      </div>
+
+      {/* Mobile menu */}
+      <div 
+        className={`md:hidden fixed inset-0 bg-white transform transition-transform duration-300 ease-in-out ${
+          isOpen ? 'translate-x-0' : 'translate-x-full'
+        }`}
+      >
+        <div className="pt-16 pb-3">
+          <div className="flex flex-col items-end px-4">
+            <div className="bg-white rounded-lg shadow-lg">
+              <Link
+                href="/"
+                className="block py-3 px-6 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-100 text-right border-b border-gray-100"
+                onClick={handleLinkClick}
+              >
+                Home
+              </Link>
+              <Link
+                href="/life"
+                className="block py-3 px-6 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-100 text-right border-b border-gray-100"
+                onClick={handleLinkClick}
+              >
+                Life of Bach
+              </Link>
+              <Link
+                href="/works"
+                className="block py-3 px-6 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-100 text-right border-b border-gray-100"
+                onClick={handleLinkClick}
+              >
+                Works
+              </Link>
+              <Link
+                href="/traditions"
+                className="block py-3 px-6 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-100 text-right border-b border-gray-100"
+                onClick={handleLinkClick}
+              >
+                Traditions
+              </Link>
+              <Link
+                href="/bachsprache"
+                className="block py-3 px-6 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-100 text-right"
+                onClick={handleLinkClick}
+              >
+                Bachsprache
+              </Link>
             </div>
           </div>
         </div>
       </div>
-    </header>
+    </nav>
   );
 } 
