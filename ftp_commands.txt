@@ -1,0 +1,12 @@
+# Set transfer mode to binary
+set ftp:ssl-allow no
+set ssl:verify-certificate no
+
+# Connect to server
+open -u if0_38572404,QSh9huQ2taik6c ftpupload.net
+
+# Clear the target directory
+mirror -R --delete-first out/ bachmas.org/htdocs/
+
+# Exit
+bye
