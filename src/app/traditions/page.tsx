@@ -41,10 +41,10 @@ export default function Traditions() {
                 Enjoy a Bachmas Movie or Documentary
               </h2>
               <p className="text-bach-brown leading-relaxed">
-                Kids and adults alike will love "Bach&apos;s Fight for Freedom".
-                </p>
+                Kids and adults alike will love &quot;Bach&apos;s Fight for Freedom&quot;.
+              </p>
                 <YouTube videoId="X3InTvPWWAU" title="Bach&apos;s Fight for Freedom" />
-                <p className="text-bach-brown leading-relaxed">
+              <p className="text-bach-brown leading-relaxed">
                 This is a phenomenal documentary about Bach&apos;s life and music.
                 <YouTube videoId="iOMZHmk15e4" title="Encountering Bach" />
               </p>
