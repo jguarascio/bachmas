@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import dynamic from 'next/dynamic';
-import { differenceInDays, differenceInHours, differenceInMinutes, differenceInSeconds, isSameDay, setYear } from 'date-fns';
+import { differenceInDays, differenceInHours, differenceInMinutes, differenceInSeconds, isSameDay } from 'date-fns';
 import Navigation from '@/components/Navigation';
 
 const Confetti = dynamic(() => import('react-confetti'), { ssr: false });
@@ -12,7 +12,7 @@ export default function Home() {
     days: 0,
     hours: 0,
     minutes: 0,
-    seconds: 0,
+    seconds: 0
   });
   const [isBachmas, setIsBachmas] = useState(false);
   const [showConfetti, setShowConfetti] = useState(false);

@@ -78,11 +78,17 @@ export default function Works() {
               The BWV System
             </h2>
             <p className="text-bach-brown leading-relaxed">
-              The Bach-Werke-Verzeichnis (BWV) is a catalogue of Johann Sebastian Bach's compositions. 
-              It was first published in 1950 and is now the standard way to reference Bach's works. 
+              The Bach-Werke-Verzeichnis (BWV) is a catalogue of Johann Sebastian Bach&apos;s compositions. 
+              It was first published in 1950 and is now the standard way to reference Bach&apos;s works. 
               The works are organized by genre and instrumentation, with sacred vocal works (cantatas, 
               motets, passions, etc.) appearing first, followed by secular vocal works, organ works, 
               keyboard works, and instrumental works.
+            </p>
+            <p className="text-lg text-bach-brown">
+              Bach&apos;s works are organized by BWV (Bach-Werke-Verzeichnis) numbers, cataloging over 1,000 compositions.
+            </p>
+            <p className="text-lg text-bach-brown">
+              The Well-Tempered Clavier&apos;s 48 preludes and fugues demonstrate Bach&apos;s mastery of counterpoint.
             </p>
           </div>
 

@@ -42,10 +42,10 @@ export default function Bachsprache() {
               The Language of Bach
             </h2>
             <p className="text-bach-brown leading-relaxed">
-              Bachsprache is a unique system of communication that uses Bach's BWV numbers to express 
+              Bachsprache is a unique system of communication that uses Bach&apos;s BWV numbers to express 
               emotions, situations, and messages. Each BWV number carries with it the emotional and 
               musical character of the work, allowing us to communicate complex feelings and ideas 
-              through the universal language of Bach's music.
+              through the universal language of Bach&apos;s music.
             </p>
           </div>
 
@@ -86,10 +86,25 @@ export default function Bachsprache() {
             </h2>
             <p className="text-bach-brown leading-relaxed">
               To communicate using Bachsprache, simply reference the BWV number that best represents 
-              your intended meaning. For example, wishing someone joy might be expressed as "BWV 140" 
-              (from the joyful cantata "Wachet auf"), or expressing sorrow as "BWV 244" (from the 
+              your intended meaning. For example, wishing someone joy might be expressed as &quot;BWV 140&quot; 
+              (from the joyful cantata &quot;Wachet auf&quot;), or expressing sorrow as &quot;BWV 244&quot; (from the 
               St. Matthew Passion). The beauty of Bachsprache lies in its ability to convey complex 
-              emotions and situations through the universal language of Bach's music.
+              emotions and situations through the universal language of Bach&apos;s music.
+            </p>
+          </div>
+
+          <div className="mt-12 bg-bach-brown/5 p-6 rounded-lg">
+            <h2 className="text-xl font-display text-bach-brown mb-4">
+              Fun Facts about Bach&apos;s Music
+            </h2>
+            <p className="text-lg text-bach-brown">
+              Bach&apos;s music is filled with symbolism and hidden meanings. For example, the number 14 (B+A+C+H = 2+1+3+8 = 14) appears frequently in his works.
+            </p>
+            <p className="text-lg text-bach-brown">
+              The &quot;Great&quot; G minor Fugue (BWV 542) is also known as the &quot;Little&quot; G minor Fugue, despite being one of his most complex works.
+            </p>
+            <p className="text-lg text-bach-brown">
+              The &quot;Little&quot; G minor Fugue (BWV 578) is actually one of his most popular and accessible works, despite its &quot;little&quot; nickname.
             </p>
           </div>
         </div>
