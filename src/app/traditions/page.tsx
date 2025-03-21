@@ -46,8 +46,8 @@ export default function Traditions() {
                 <YouTube videoId="X3InTvPWWAU" title="Bach&apos;s Fight for Freedom" />
               <p className="text-bach-brown leading-relaxed">
                 This is a phenomenal documentary about Bach&apos;s life and music.
-                <YouTube videoId="iOMZHmk15e4" title="Encountering Bach" />
               </p>
+              <YouTube videoId="iOMZHmk15e4" title="Encountering Bach" />
             </section>
 
             <section className="bg-bach-brown/5 p-6 rounded-lg">
