@@ -27,6 +27,17 @@ export default function Traditions() {
 
             <section className="bg-bach-brown/5 p-6 rounded-lg">
               <h2 className="text-2xl font-display text-bach-brown mb-4">
+                Greetings and Sayings
+              </h2>
+              <p className="text-bach-brown leading-relaxed">
+                A common greeting is &quot;Merry Bachmas!&quot; or the German equivalent &quot;Frohe Bachmas!&quot;
+                or &quot;Froeliche Bachmas an alle!&quot;. 
+                It is also customary to proclaim &quot;Next year in Leipzig!&quot; at the end of a performance or meal.
+              </p>
+            </section>
+
+            <section className="bg-bach-brown/5 p-6 rounded-lg">
+              <h2 className="text-2xl font-display text-bach-brown mb-4">
                 Gifts of Music and Music-Related Gifts
               </h2>
               <p className="text-bach-brown leading-relaxed">
@@ -56,8 +67,8 @@ export default function Traditions() {
               </h2>
               <p className="text-bach-brown leading-relaxed">
                 The celebration continues with a grand Bachmas feast, featuring traditional German fare. 
-                Tables are laden with bratwurst, potato pancakes, and other German delicacies. Families and 
-                friends gather to share in this festive meal, creating memories that will last a lifetime.
+                Tables are laden with bratwurst, potato pancakes, and other German delicacies. German Chocolate Cake is also a must! 
+                Families and friends gather to share in this festive meal, creating memories that will last a lifetime.
               </p>
             </section>
 
