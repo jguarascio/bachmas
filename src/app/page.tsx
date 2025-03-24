@@ -73,7 +73,7 @@ export default function Home() {
     const bachBirthYear = 1685;
     const bachDeathYear = 1750;
 
-    for (let year = bachBirthYear; year <= currentYear + 50; year += 50) {
+    for (let year = bachBirthYear; year <= currentYear + 100; year += 50) {
       if (year >= currentYear) {
         years.push({
           year,
@@ -120,16 +120,6 @@ export default function Home() {
                 On this day in 1685, Johann Sebastian Bach was born in Eisenach, Germany.
                 That was {new Date().getFullYear() - 1685} years ago!
               </p>
-              <div className="bg-bach-brown/5 p-6 rounded-lg">
-                <h2 className="text-2xl font-display text-bach-brown mb-4">Upcoming Jubilee Years</h2>
-                <ul className="space-y-2">
-                  {getJubileeYears().map((jubilee) => (
-                    <li key={jubilee.year} className="text-lg text-bach-brown">
-                      {jubilee.year} - {jubilee.type === 'birth' ? 'Birth' : 'Death'} Anniversary ({jubilee.yearsSince} years since {jubilee.type === 'birth' ? 'birth' : 'death'})
-                    </li>
-                  ))}
-                </ul>
-              </div>
             </div>
           ) : (
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto">
@@ -151,6 +141,20 @@ export default function Home() {
               </div>
             </div>
           )}
+        <div className="pt-24 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <h1 className="text-4xl font-display text-bach-brown mb-8">Upcoming Jubilee Years</h1>
+            <ul className="space-y-2">
+              {getJubileeYears().map((jubilee) => (
+                <li key={jubilee.year} className="text-lg text-bach-brown">
+                  {jubilee.year} - {jubilee.type === 'birth' ? 'Birth' : 'Death'} Anniversary ({jubilee.yearsSince} years since {jubilee.type === 'birth' ? 'birth' : 'death'})
+                </li>
+              ))}
+            </ul>
+            <br />
+            <p className="text-xl text-bach-brown">
+              See you in Leipzig!
+            </p>
+          </div>
         </div>
       </div>
     </main>
