@@ -141,20 +141,28 @@ export default function Home() {
               </div>
             </div>
           )}
-        <div className="pt-24 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-            <h1 className="text-4xl font-display text-bach-brown mb-8">Upcoming Jubilee Years</h1>
-            <ul className="space-y-2">
-              {getJubileeYears().map((jubilee) => (
-                <li key={jubilee.year} className="text-lg text-bach-brown">
-                  {jubilee.year} - {jubilee.type === 'birth' ? 'Birth' : 'Death'} Anniversary ({jubilee.yearsSince} years since {jubilee.type === 'birth' ? 'birth' : 'death'})
-                </li>
-              ))}
-            </ul>
-            <br />
-            <p className="text-xl text-bach-brown">
-              See you in Leipzig!
-            </p>
+          <div className="pt-24 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+              <h1 className="text-4xl font-display text-bach-brown mb-8">Upcoming Jubilee Years</h1>
+              <ul className="space-y-2">
+                {getJubileeYears().map((jubilee) => (
+                  <li key={jubilee.year} className="text-lg text-bach-brown">
+                    {jubilee.year} - {jubilee.type === 'birth' ? 'Birth' : 'Death'} Anniversary ({jubilee.yearsSince} years since {jubilee.type === 'birth' ? 'birth' : 'death'})
+                  </li>
+                ))}
+              </ul>
+              <br />
+              <p className="text-xl text-bach-brown">
+                Next year in Leipzig!
+              </p>
           </div>
+          <div className="pt-24 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+              <h2 className="text-2xl font-display text-bach-brown mb-8">What about March 31st?</h2>
+              <p className="text-xl text-bach-brown">
+                Yes, the Wikipedia article on Johann Sebastian Bach states March 31 as his birthday. No. Just no. Bach was born on March 21 according to the Julian calendar that was in use at the time he was born. 
+                That is the date that he knew and the date he, himself, would have celebrated. A birthday is an essential part of a person&apos;s identity. Would you want someone to change yours? What if some scholar decided
+                &quot;Nope, that&apos;s not your birthday! This new date is!&quot; Calling March 31st his birthday is anachronistic, disrespectful, and just plain wrong.
+              </p>
+          </div>          
         </div>
       </div>
     </main>
